@@ -1,0 +1,53 @@
+import java.util.*;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        // write ur code here
+        int n = scn.nextInt();
+
+        int row=1, nspaces = n/2, nstar = 1 ;
+
+        while(row<=n){
+          // 1.print spaces
+           for(int i =1; i<=nspaces; i++){
+              //  System.out.print("\t");
+              if(row==n/2+1){
+                  System.out.print("*\t");
+              
+              }else{
+                  System.out.print("\t");
+              }
+
+              //System.out.print("\t");
+           }
+
+           // print star
+
+           for(int i = 1; i<=nstar; i++){
+               System.out.print("*\t");
+           }
+
+           // move to next line
+
+           
+            System.out.println();
+
+            // preparation of next row
+
+            if(row<=n/2){
+                nstar = nstar +1;
+            }else{
+                nstar = nstar -1;
+            }
+
+            row++;
+        }
+
+       
+
+    }
+}
