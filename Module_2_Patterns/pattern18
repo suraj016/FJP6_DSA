@@ -1,0 +1,56 @@
+import java.util.*;
+import java.util.Scanner;
+public class Main{
+
+public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+
+     // write ur code here
+
+     int n = scn.nextInt();
+
+     // first initialize the first row
+
+     int row = 1, nstar = n, nspace = 0;
+
+     while(row<=n){
+
+         // to print spaces
+
+         for(int i = 1; i<=nspace; i++){
+             System.out.print("\t");
+         }
+
+         // to print the star
+
+         for(int i =1; i<=nstar; i++){
+
+             if(row>1 && row<=n/2 && i>1 && i<nstar){
+                 System.out.print("\t");
+             }else{ System.out.print("*\t");}
+            
+         }
+
+         
+
+         // next line
+
+         System.out.println();
+
+         // preparation for the next row
+
+         if(row<=n/2){
+             nspace =nspace + 1;
+             nstar = nstar - 2;
+         
+            }else{
+                 nspace = nspace -1;
+            nstar = nstar + 2;
+            }
+          
+
+            row++;
+     }
+
+ }
+}
