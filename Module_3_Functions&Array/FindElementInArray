@@ -1,0 +1,59 @@
+Format
+Input
+A number n
+n1
+n2
+.. n number of elements
+A number d
+
+Output
+A number representing index at which d is found in array a and -1 if not found
+
+Example
+Sample Input
+
+6
+15
+30
+40
+4
+11
+9
+40
+
+Sample Output
+2
+
+
+
+
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+    public static void main(String[] args) throws Exception {
+        Scanner scn = new Scanner(System.in);
+
+        int n = scn.nextInt(); // len 
+        int arr[] = new int[n]; // arr
+        for(int idx = 0 ; idx <= n-1 ; idx++){
+            arr[idx] = scn.nextInt();
+        }
+        int ele = scn.nextInt(); // element
+
+        int response = find(arr,ele);
+        System.out.println(response);
+    }
+      public static int find(int arr[],int ele){
+        // logic
+        for(int idx = 0; idx<=arr.length-1; idx++){
+            if(arr[idx] ==ele){
+                return idx;
+            }
+        }
+        return -1;
+    }
+
+}

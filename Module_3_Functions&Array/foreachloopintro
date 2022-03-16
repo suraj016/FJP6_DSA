@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+    public static void main(String[] args)  {
+       
+
+       int arr[] = new int[5];
+
+
+       arr[0] = 23;
+       arr[1] = 32;
+       arr[2] = -34;
+       arr[3] = 4333;
+       arr[4] = 0;
+
+
+       for( int val : arr) {
+           System.out.println(val+ " ");
+           
+       }
+       System.out.println();
+    }
+
+}  
