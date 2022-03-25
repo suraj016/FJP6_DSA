@@ -1,0 +1,46 @@
+Output
+d1
+d2
+d3
+... digits of the number
+
+Example
+Sample Input
+
+65784383
+
+Sample Output
+6
+5
+7
+8
+4
+3
+8
+3
+
+
+
+import java.util.*;
+    
+    public class Main{
+    
+    public static void main(String[] args) {
+      // write your code here  
+      Scanner scn=new Scanner(System.in);
+      int n=scn.nextInt();
+      int copyOfN=n;
+      int temp=1;
+      while(copyOfN>9){
+        copyOfN=copyOfN/10;
+        temp=temp*10;
+      } 
+      while(temp!=0){
+        int digit=n/temp;
+        System.out.println(digit);
+        n=n%temp;
+        temp=temp/10;
+      }
+        
+     }
+    }
