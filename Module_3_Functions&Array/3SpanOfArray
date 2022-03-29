@@ -61,7 +61,7 @@ public static void main(String[] args) throws Exception {
 
     }
 
-    int span = max - min;
+    int span = max - min;       // formulae
 
     System.out.println(span);
 
