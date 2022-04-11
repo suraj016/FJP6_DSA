@@ -47,6 +47,10 @@ Sample Output
 
 
 
+// main method 
+
+
+
 import java.util.*;
   
   public class Main{
