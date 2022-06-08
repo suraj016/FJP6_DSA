@@ -1,0 +1,24 @@
+import java.util.*;
+class Solution {
+    public int[] sortArray(int[] nums) {
+      selectionSort(nums);
+       return nums;
+    }
+    public static void swap(int nums[],int i,int j){
+        int tmp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = tmp;
+    }
+    public static void insertionSort(int nums[]){
+        int n = nums.length;
+        for(int itr = 1 ; itr <= n-1 ; itr++){
+            for(int idx = itr ; idx > 0 ; idx--){
+                if(nums[idx] < nums[idx-1]){
+                    swap(nums, idx, idx-1);
+                }else{
+                    break;
+                }   
+            }
+        }
+    }
+}
