@@ -1,7 +1,7 @@
 import java.util.*;
 class Solution {
     public int[] sortArray(int[] nums) {
-      selectionSort(nums);
+        bubbleSort(nums);
        return nums;
     }
     public static void swap(int nums[],int i,int j){
@@ -21,3 +21,5 @@ class Solution {
     }
 
 }
+
+// bubble sort algorith
