@@ -43,7 +43,7 @@ class Codechef
 	 public static void main (String[] args)
 	 {
 
-	int arr [] = new int[] {11,12,13,14,15};
-	arrReverse(arr);
+	int arr [] = new int[] {11,12,13,14,15};    // array initilize kiya
+	arrReverse(arr);    // reverse func call kiya
 	 }
 }
