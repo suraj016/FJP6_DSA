@@ -1,0 +1,60 @@
+ Q Kthsmallest KthLargest element 
+
+Given an array arr[] and an integer K where K is smaller than size of array, the task is to find the Kth smallest element in the given array. It is given that all array elements are distinct.
+
+Example 1:
+
+Input:
+N = 6
+arr[] = 7 10 4 3 20 15
+K = 3
+Output : 7
+Explanation :
+3rd smallest element in the given 
+array is 7.
+
+
+
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+      
+      static void KthSmallest(Integer arr [], int k){
+            Arrays.sort(arr); 
+            System.out.println(arr[k-1]);
+      }
+      
+      
+      
+      static void KthLargest(Integer arr [], int l){
+            Arrays.sort(arr,Collections.reverseOrder()); 
+            System.out.println(arr[l-1]);
+      }
+      
+      
+      
+      
+	public static void main (String[] args) 
+	{
+	
+		
+		// array input
+		
+		Integer arr [] ={324,235,123,45,34,32,3542,325};
+		
+	      int k = 3;
+	      int l = 5;
+		
+		KthSmallest(arr,k);
+		KthLargest(arr,k);
+		
+		
+	
+	}
+}
