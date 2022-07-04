@@ -1,0 +1,35 @@
+Move all negative numbers to beginning and positive to end with constant extra space
+
+
+
+
+class Codechef
+{
+	public static void main (String[] args)
+	{
+	    
+	    int[] arr = { -1, 2, -3, 4, 5, 6, -7, 8, 9 };
+	    
+	    int lo = 0, ho = arr.length-1;
+	    
+	    
+	    while(lo<ho){
+	        while(arr[lo]<0){lo++;}
+	         while(arr[ho]>0){ho--;}
+	         
+	         
+	         if(lo>=ho)break;
+	         
+	         int temp = arr[lo];
+	         arr[lo] = arr[ho];
+	         arr[ho] = temp;
+	         
+	         
+	       for (int i = 0; i < arr.length; i++)
+            System.out.print(arr[i] + " ");
+	        
+	        
+	    }
+	    
+	}
+}
