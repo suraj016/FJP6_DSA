@@ -1,0 +1,27 @@
+Given an array, rotate the array by one position in clock-wise direction.
+ 
+
+Example 1:
+
+Input:
+N = 5
+A[] = {1, 2, 3, 4, 5}
+Output:
+5 1 2 3 4
+
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+       int arr[] = {1,2,3,4,5};   // array ko initialize kiya
+       int x = arr[arr.length-1];    // last element ko store kiya
+       for(int i = arr.length-1; i > 0; i--){   // loop ko last element se second tak chalenge
+           arr[i] = arr[i-1];  // value insert karenge
+       }
+       arr[0] = x;   // 0 wale mae value fill kiya
+       
+       for(int i = 0; i < arr.length; i++){
+           System.out.println(arr[i] + " \t");  // array ko print kiya
+       }
+    }
+}
