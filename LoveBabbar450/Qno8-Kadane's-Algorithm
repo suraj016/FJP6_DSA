@@ -2,6 +2,10 @@
 Given an array Arr[] of N integers. Find the contiguous sub-array(containing at least one number) which has the maximum sum and return its sum.
 
 
+
+
+
+
 Example 1:
 
 Input:
@@ -20,11 +24,11 @@ class HelloWorld {
     
     
     static void maxSumArray(int arr[]){
-        int maxSum = Integer.MIN_VALUE;
+        int maxSum = Integer.MIN_VALUE;  /// starting mae maxSum and current sum ko 0 initialize karenge
         int curSum = 0;
         
-        for(int i = 0; i < arr.length; i++){
-            curSum = curSum + arr[i];
+        for(int i = 0; i < arr.length; i++){      // loop chalenge and 
+            curSum = curSum + arr[i];    
             
             if(curSum > maxSum){
                 maxSum = curSum;
@@ -46,3 +50,8 @@ class HelloWorld {
         maxSumArray(arr);
     }
 }
+
+
+
+
+// Kadane's Algorithm is an iterative dynamic programming algorithm. It calculates the maximum sum subarray ending at a particular position by using the maximum sum subarray ending at the previous position.
